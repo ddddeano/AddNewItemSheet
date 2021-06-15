@@ -25,7 +25,10 @@ struct ContentView: View {
             }
             .navigationBarItems(
                 leading: Text("Items"),
-                trailing: Image(systemName: "plus.circle"))
+                trailing: Image(systemName: "plus.circle")
+                    .onTapGesture {
+                        VM.showAddNewIncomeSheet = true
+                    })
         }
     }
 }
